@@ -62,8 +62,8 @@ contract vrfGeneratorArbitrumSepolia is CCIPReceiver, VRFConsumerBaseV2Plus {
         override
     {
         s_lastReceivedMessageId = any2EvmMessage.messageId; // fetch the messageId
-        s_lastReceivedText = abi.decode(any2EvmMessage.data, (string)); // abi-decoding of the sent text
-
+        s_lastReceivedText = abi.decode(any2EvmMessage.data, (string));
+        
         generateRandomNumber();
 
         emit MessageReceived(

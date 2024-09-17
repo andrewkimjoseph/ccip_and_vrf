@@ -259,7 +259,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"vrfReceiverCeloAlfajores.sol": "vrfGeneratorArbitrumSepolia"
+			"vrfReceiverCeloAlfajores.sol": "vrfGeneratorCeloAlfajores"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -386,11 +386,11 @@
 			]
 		},
 		"vrfReceiverCeloAlfajores.sol": {
-			"keccak256": "0x8e17f4ff82a9fe29896d10704062a9e32044c1382e13e2184403b245d8086cb9",
+			"keccak256": "0x6d044b311e4b35a1686cdd3b0b17fd061c0ebfa9b3d6f3081f037a64e591a338",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://28be76d4b3b3889d19d26666d4b09a47bf168a4a48242dcd473f2416306ad7fd",
-				"dweb:/ipfs/QmRyS9yWULwsHxLydujTQzh3p9dcDm9eLQprnZxGVX3mE2"
+				"bzz-raw://8ea3c86c32f5098552d06ff9b59783ad862d41e7e166a7db22e54becb02c89e7",
+				"dweb:/ipfs/QmaYuwvdQDy5wyJziELY4mYsa9VAwJZ8EDTp71dQFndoQa"
 			]
 		}
 	},

@@ -9,8 +9,7 @@ import {CCIPReceiver} from "@chainlink/contracts-ccip@1.4.0/src/v0.8/ccip/applic
 import {IRouterClient} from "@chainlink/contracts-ccip@1.4.0/src/v0.8/ccip/interfaces/IRouterClient.sol";
 import {LinkTokenInterface} from "@chainlink/contracts@1.2.0/src/v0.8/shared/interfaces/LinkTokenInterface.sol";
 
-contract vrfGeneratorArbitrumSepolia is CCIPReceiver {
-
+contract vrfGeneratorCeloAlfajores is CCIPReceiver {
     event MessageReceived(
         bytes32 indexed messageId, // The unique ID of the message.
         uint64 indexed sourceChainSelector, // The chain selector of the source chain.
@@ -29,7 +28,7 @@ contract vrfGeneratorArbitrumSepolia is CCIPReceiver {
         bytes32 indexed messageId, // The unique ID of the CCIP message.
         uint64 indexed destinationChainSelector, // The chain selector of the destination chain.
         address receiver, // The address of the receiver on the destination chain.
-        uint256 randomNumber, // The text being sent.
+        string message, // The text being sent.
         address feeToken, // the token address used to pay CCIP fees.
         uint256 fees // The fees paid for sending the CCIP message.
     );
@@ -38,13 +37,11 @@ contract vrfGeneratorArbitrumSepolia is CCIPReceiver {
 
     LinkTokenInterface private s_linkToken;
 
-    constructor(
-        address _stekcitBMOwnerAddress,
-        address router,
-        address _link
-    ) CCIPReceiver(router) {
-        s_router = IRouterClient(router);
-        s_linkToken = LinkTokenInterface(_link);
+    constructor() CCIPReceiver(0xb00E95b773528E2Ea724DB06B75113F239D15Dca) {
+        s_router = IRouterClient(0xb00E95b773528E2Ea724DB06B75113F239D15Dca);
+        s_linkToken = LinkTokenInterface(
+            0x32E08557B14FaD8908025619797221281D439071
+        );
     }
 
     function _ccipReceive(Client.Any2EVMMessage memory any2EvmMessage)
@@ -62,15 +59,12 @@ contract vrfGeneratorArbitrumSepolia is CCIPReceiver {
         );
     }
 
-    function sendMessage(
-        uint64 destinationChainSelector,
-        address receiver,
-        uint256 randomNumber
-    ) public returns (bytes32 messageId) {
+    function sendMessage(address receiver) public returns (bytes32 messageId) {
+        uint64 destinationChainSelector = 3478487238524512106;
         // Create an EVM2AnyMessage struct in memory with necessary information for sending a cross-chain message
         Client.EVM2AnyMessage memory evm2AnyMessage = Client.EVM2AnyMessage({
             receiver: abi.encode(receiver), // ABI-encoded receiver address
-            data: abi.encode(randomNumber), // ABI-encoded uint256
+            data: abi.encode("generateRandomNumber"), // ABI-encoded uint256
             tokenAmounts: new Client.EVMTokenAmount[](0), // Empty array indicating no tokens are being sent
             extraArgs: Client._argsToBytes(
                 // Additional arguments, setting gas limit
@@ -100,7 +94,7 @@ contract vrfGeneratorArbitrumSepolia is CCIPReceiver {
             messageId,
             destinationChainSelector,
             receiver,
-            randomNumber,
+            "generateRandomNumber",
             address(s_linkToken),
             fees
         );
