@@ -259,7 +259,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"vrfReceiverCeloAlfajores.sol": "vrfGeneratorCeloAlfajore"
+			"vrfReceiverOptimismSepolia.sol": "vrfGeneratorOptimismSepolia"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -385,12 +385,12 @@
 				"dweb:/ipfs/QmcE3Hef9XLSbthiS3DKQFF1ZpYDZsPLHwW1DY5iUGAfcd"
 			]
 		},
-		"vrfReceiverCeloAlfajores.sol": {
-			"keccak256": "0x12ed23dbd9ead03438d06a7f9f57cf6221976fc462dc066e65dd2c22dc8b477b",
+		"vrfReceiverOptimismSepolia.sol": {
+			"keccak256": "0x2b4b803b47582d4fd728b26978a065b4124b4728206d8f350244d375e530e0fe",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://099b080c23042973882eb7b3d50c0262425c793107e15812820aea3f61de1b10",
-				"dweb:/ipfs/QmUPmjX9YxiG6rPCPXzbq1JwFGdHk245ZZHq9p8NvjXzdX"
+				"bzz-raw://7df02ebae1306736e27a446a3c600d4be7bdf5dd651797576e6f89310b3a7bf4",
+				"dweb:/ipfs/QmTvVGMG1RwQQELYUnxjh8NHAsPvqhqMG8YzTqDkNj1wZb"
 			]
 		}
 	},

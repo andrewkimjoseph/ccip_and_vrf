@@ -1,0 +1,58 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "EXTRA_ARGS_V1_TAG",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"vrfGeneratorArbitrumSepolia_flattened.sol": "VRFV2PlusClient"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"vrfGeneratorArbitrumSepolia_flattened.sol": {
+			"keccak256": "0x553e0cc3303c0af939aa011805ab4948d0e5dcd684ed04c9779eac715545ada2",
+			"urls": [
+				"bzz-raw://2b68a83c7722571c472feab6944f4ddff093e8a78dc2ffe731650b320c2f970f",
+				"dweb:/ipfs/QmbajLtoXiT6rzkx1QEKixuYHrUUWAq3WHv4Bvzk52vdFJ"
+			]
+		}
+	},
+	"version": 1
+}
